@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(60deg, rgb(162, 199, 146) 30%, rgb(252, 253, 233) 20%);
+  /* background-color: antiquewhite; */
+}
+
+#contain {
+  width: 100%;
+  min-width: 1024px;
+  height: 100%;
+  min-height: 750px;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 300px;
+
+}
+
+#con_top {
+  width: 100%;
+  height: 10%;
+  /* background-color: blueviolet; */
+  min-height: 90px;
+  position: relative;
+}
+
+#con_top p {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  font-family: kat;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* 主体部分 */
+
+#con_bottom {
+  width: 100%;
+  height: 90%;
+}
+
+#left {
+  width: 20%;
+  height: 100%;
+  float: left;
+  min-width: 204.8px;
+  min-height: 601.6px;
+}
+
+#right {
+  width: 80%;
+  height: 100%;
+  min-width: 716.8px;
+  min-height: 601.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* 翻牌子 */
+#right .game {
+  width: 90%;
+  height: 95%;
+  min-width: 700px;
+
+}
+
+.game__cards {
+  width: 705px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 140px 140px 140px 140px;
+  grid-gap: 15px;
+  padding: 0 20px;
+}
+
+svg {
+  display: block;
+}
+
+.game__cards.no-event {
+  pointer-events: none;
+}
+
+.game__card {
+  position: relative;
+  cursor: pointer;
+  -webkit-perspective: 700px;
+  perspective: 700px;
+}
+
+.game__card.flipped,
+.game__card.has-match {
+  pointer-events: none;
+}
+
+.game__card.flipped .game__back-card,
+.game__card.has-match .game__back-card {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.game__card.flipped .game_front-card,
+.game__card.has-match .game_front-card {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+.game__back-card,
+.game_front-card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgb(255, 186, 104);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.game__back-card {
+  z-index: 1;
+}
+
+.game_front-card {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+#reStart {
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(rgb(255, 186, 104) 60%, rgb(191, 103, 39));
+  box-sizing: border-box;
+  padding-top: 50px;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: 50px;
+  top: 70%;
+  font-family: kat;
+  font-size: 2em;
+}

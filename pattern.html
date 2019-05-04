@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>随心堆堆堆</title>
+    <link rel="stylesheet" type="text/css" href="css/pattern.css">
+    <link rel="stylesheet" type="text/css" href="css/slideControl.css" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <script type="text/javascript" src="js/patternMove.js"></script>
+    <script type="text/javascript" src="js/patternDraw.js"></script>
+</head>
+
+<body onload="pageLoad();inDrag();">
+    <p>这是一个随心堆积画板。你可以通过单击图形并且拖动，使图形在画板内自由的移动，拼成自己想要的形状</p>
+    <div id="div">
+        <div id="pattern1">
+            <canvas class="pattern" id="square" width="100px" height="100px"></canvas>
+        </div>
+        <div id="pattern2">
+            <canvas class="pattern" id="circle" width="100px" height="100px"></canvas>
+        </div>
+        <div id="pattern3">
+            <canvas class="pattern" id="rectangle" width="100px" height="100px"></canvas>
+        </div>
+        <div id="pattern4">
+            <canvas class="pattern" id="triangle" width="100px" height="100px"></canvas>
+        </div>
+        <div id="pattern5">
+            <canvas class="pattern" id="rhombus" width="100px" height="100px"></canvas>
+        </div>
+        <div id="pattern6">
+            <canvas class="pattern" id="parallelogram" width="100px" height="100px"></canvas>
+        </div>
+        <div id="pattern7">
+            <canvas class="pattern" id="pentagon" width="100px" height="100px"></canvas>
+        </div>
+        <div id="pattern8">
+            <canvas class="pattern" id="trapezoid" width="100px" height="100px"></canvas>
+        </div>
+        <div id="pattern9">
+            <canvas class="pattern" id="hround" width="100px" height="100px"></canvas>
+        </div>
+    </div>
+    <div id="reStart">
+        重新开始
+    </div>
+    <div class="leftNav-item">
+        <ul>
+            <li>
+                <a href="page.html" class="rota">动脑拼拼拼</a>
+            </li>
+            <li>
+                <a href="herocraft.html" class="rota">开心翻翻乐</a>
+            </li>
+            <li><a href="pattern.html" class="rota">随心堆堆堆</a>
+            </li>
+        </ul>
+    </div>
+    <script async defer>
+        var reStart = document.getElementById('reStart');
+        reStart.onclick = function(){
+            location.reload(true);
+        }
+    </script>
+</body>
+
+</html>
